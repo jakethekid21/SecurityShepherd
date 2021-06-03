@@ -1,11 +1,7 @@
 # replace .war with .jar or .ear if needed
 name: Whitesource Prioritize Java with Maven
 
-on:
-  push:
-    branches: [ release* ]
-  pull_request:
-    branches: [ release* ]
+on: workflow_dispatch
 
 jobs:
   build:
