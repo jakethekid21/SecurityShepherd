@@ -23,7 +23,6 @@ jobs:
       run: mvn clean install -DskipTests=true
     - name: WhiteSource Unified Agent Scan
       env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         WS_APIKEY: ${{secrets.APIKEY}}
         WS_WSS_URL: https://saas.whitesourcesoftware.com/agent
         WS_PRODUCTNAME: GH_${{github.event.repository.name}}
