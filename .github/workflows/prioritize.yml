@@ -37,8 +37,5 @@ jobs:
         echo Unified Agent downloaded successfully
         WARFILE=$(find ./ -type f -wholename "*/target/*.war")
         java -jar wss-unified-agent.jar -appPath $WARFILE -d ./
-        echo After Unified Agent execution
-        ls -l
-        echo After Unified Agent execution
-        ls -l
+        echo publish effective vulnerability links
         chmod +x ./scripts/ghissue-eua.sh && ./scripts/ghissue-eua.sh
