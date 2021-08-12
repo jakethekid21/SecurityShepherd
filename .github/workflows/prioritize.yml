@@ -38,4 +38,4 @@ jobs:
         ls -l
         echo workflow folder
         ls -l ./
-        chmod +x ghissue-eua.sh && ghissue-eua.sh
+        chmod +x ./scripts/ghissue-eua.sh && ./scripts/ghissue-eua.sh
