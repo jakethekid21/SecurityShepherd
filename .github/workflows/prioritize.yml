@@ -35,4 +35,7 @@ jobs:
         echo Unified Agent downloaded successfully
         WARFILE=$(find ./ -type f -wholename "*/target/*.war")
         java -jar wss-unified-agent.jar -appPath $WARFILE -d ./
+        ls -l
+        echo workflow folder
+        ls -l ./
         chmod +x ghissue-eua.sh && ghissue-eua.sh
