@@ -23,7 +23,7 @@ jobs:
         WS_APIKEY: ${{secrets.APIKEY}}
         WS_USERKEY: ${{secrets.USERKEY}}
         WS_WSS_URL: https://saas.whitesourcesoftware.com/agent
-        WS_PRODUCTNAME: GH_${{github.event.repository.name}}_2
+        WS_PRODUCTNAME: GH_${{github.event.repository.name}}
         WS_PROJECTNAME: ${{github.event.repository.name}}_Prioritize
         WS_ENABLEIMPACTANALYSIS: true
         WS_REQUIREKNOWNSHA1: false
@@ -37,5 +37,3 @@ jobs:
         echo Unified Agent downloaded successfully
         WARFILE=$(find ./ -type f -wholename "*/target/*.war")
         java -jar wss-unified-agent.jar -appPath $WARFILE -d ./
-        echo publish effective vulnerability links
-        chmod +x ./scripts/ghissue-eua.sh && ./scripts/ghissue-eua.sh
